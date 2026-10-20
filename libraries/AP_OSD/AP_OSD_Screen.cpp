@@ -2676,6 +2676,7 @@ void AP_OSD_Screen::draw(void)
 #endif
 #if AP_VIDEOTX_ENABLED
     DRAW_SETTING(vtx_power);
+    DRAW_SETTING(vtx_band_channel);
 #endif
 
 #if HAL_WITH_ESC_TELEM
