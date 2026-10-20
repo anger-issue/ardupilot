@@ -927,6 +927,21 @@ const AP_Param::GroupInfo AP_OSD_Screen::var_info[] = {
     // @Description: Vertical position on screen
     // @Range: 0 21
     AP_SUBGROUPINFO(vtx_power, "VTX_PWR", 55, AP_OSD_Screen, AP_OSD_Setting),
+    // @Param: VTX_CH_EN
+    // @DisplayName: VTX Band and Channel
+    // @Description: Display the current VTX band and channel
+    // @Values: 0:Disabled,1:Enabled
+    
+    // @Param: VTX_CH_X
+    // @DisplayName: VTX Channel X Position
+    // @Description: Horizontal position on screen
+    // @Range: 0 29
+    
+    // @Param: VTX_CH_Y
+    // @DisplayName: VTX Channel Y Position
+    // @Description: Vertical position on screen
+    // @Range: 0 15
+    AP_SUBGROUPINFO(vtx_band_channel, "VTX_CH", 63, AP_OSD_Screen, AP_OSD_Setting),
 #endif  // AP_VIDEOTX_ENABLED
 
 #if AP_TERRAIN_AVAILABLE
