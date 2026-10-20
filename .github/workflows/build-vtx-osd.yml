@@ -1,6 +1,9 @@
 name: Build TBS Lucid H7 VTX OSD
 
 on:
+  push:
+    branches:
+      - vtx-band-channel
   workflow_dispatch:
 
 jobs:
