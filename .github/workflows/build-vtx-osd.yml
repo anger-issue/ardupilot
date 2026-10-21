@@ -38,7 +38,18 @@ jobs:
       - name: Compile ArduCopter
         run: |
           ./waf copter -j2
+      - name: Generate parameter metadata
+        run: |
+          ./Tools/autotest/param_metadata/param_parse.py --vehicle ArduCopter --format xml
+          grep -q 'OSD1_VTX_CH_EN' apm.pdef.xml
 
+      - name: Upload parameter metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: VTX_OSD_Parameter_Metadata
+          path: apm.pdef.xml
+          if-no-files-found: error
+          
       - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
