@@ -930,16 +930,16 @@ const AP_Param::GroupInfo AP_OSD_Screen::var_info[] = {
 
     // @Param: VTX_CH_EN
     // @DisplayName: VTX Band and Channel
-    // @Description: Enables display of the current video transmitter band and channel on the OSD
+    // @Description: Displays the configured VTX band and channel. Band labels: A=A, B=B, E=E, F=FatShark, R=Raceband, L=Low Raceband, 1=1G3_A, 2=1G3_B, X=X, 3=3G3_A, 4=3G3_B.
     // @Values: 0:Disabled,1:Enabled
     // @User: Standard
-    
+
     // @Param: VTX_CH_X
     // @DisplayName: VTX Band and Channel X Position
     // @Description: Horizontal position of the VTX band and channel display
     // @Range: 0 59
     // @User: Standard
-    
+
     // @Param: VTX_CH_Y
     // @DisplayName: VTX Band and Channel Y Position
     // @Description: Vertical position of the VTX band and channel display
@@ -2529,6 +2529,7 @@ void AP_OSD_Screen::draw_vtx_power(uint8_t x, uint8_t y)
     }
     backend->write(x, y, !vtx->is_configuration_finished(), "%4hu%c", powr, SYMBOL(SYM_MW));
 }
+
 void AP_OSD_Screen::draw_vtx_band_channel(uint8_t x, uint8_t y)
 {
     AP_VideoTX *vtx = AP_VideoTX::get_singleton();
