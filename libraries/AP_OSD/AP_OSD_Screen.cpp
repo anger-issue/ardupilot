@@ -2536,8 +2536,8 @@ void AP_OSD_Screen::draw_vtx_band_channel(uint8_t x, uint8_t y)
         return;
     }
 
-    const uint8_t band = vtx->get_band();
-    const uint8_t channel = vtx->get_channel();
+    const uint8_t band = vtx->get_configured_band();
+    const uint8_t channel = vtx->get_configured_channel();
 
     static constexpr char band_chars[] = {
         'A', 'B', 'E', 'F', 'R', 'L',
