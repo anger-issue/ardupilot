@@ -229,7 +229,7 @@ private:
     AP_OSD_Setting clk;
     AP_OSD_Setting callsign;
     AP_OSD_Setting vtx_power;
-    AP_OSD Setting vtx_band_channel;
+    AP_OSD_Setting vtx_band_channel;
     AP_OSD_Setting hgt_abvterr{false, 23, 7};
     AP_OSD_Setting fence{false, 14, 9};
     AP_OSD_Setting rngf;
